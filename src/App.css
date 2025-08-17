@@ -36,3 +36,66 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Gradient background: dark + elegant */
+
+background: linear-gradient(135deg, #0d1b2a, #3a3a52, #dcdcdc);
+  /* Makes the gradient animate/move slowly */
+
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+    /* Flexbox to center cards */
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+
+
+/* PLAYER CARD STYLING */
+
+
+
+.card {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  width: 320px;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Hover effect: scale up slightly and darken shadow */
+
+.card:hover {
+  transform: scale(1.10);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+/* Player image inside the card */
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+height: 200px;
+}
+
+
+
